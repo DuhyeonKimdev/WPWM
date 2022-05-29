@@ -14,14 +14,14 @@
 
 <article style="margin-top: 250px;" class="container">
 	<div class="regTbl1">
-		<a href="edit">개인정보 관리</a>
+		<a href="edit">Settings</a>
 	</div>
 	<div class="regTbl2">
-		<a href="RegUpdate?id=${reg.id }">비밀번호 변경</a>
+		<a href="RegUpdate?id=${reg.id }">パスワード変更</a>
 	</div>
 
 	<div class="regTbl3">
-		<a href="leave">회원탈퇴</a>
+		<a href="leave">会員退会</a>
 	</div>
 </article>
 	
@@ -31,7 +31,7 @@
 	<td class="regfont2">${sessionScope.accountInfo.id }</td>
 	</tr>
 	<tr>
-	<td class="regfont1">닉네임</td>
+	<td class="regfont1">ニックネーム</td>
 	<td class="regfont2">${sessionScope.accountInfo.nickname }</td>
 	</tr>
 </table>

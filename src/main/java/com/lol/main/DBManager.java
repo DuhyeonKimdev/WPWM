@@ -14,7 +14,7 @@ public class DBManager {
 	// db작업시에는 어쨋든 연결을 해줘야함
 	public static Connection connect() throws SQLException {
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			return DriverManager.getConnection(url, "dh", "dh");  // 이코드 타입이 Connection임
+			return DriverManager.getConnection(url, "dh", "dbtest");  // 이코드 타입이 Connection임
 				
 	}
 	// 닫을게 많은데 한번에 닫기

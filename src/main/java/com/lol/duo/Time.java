@@ -17,21 +17,21 @@ public class Time {
 		String msg = null;
 		if (diffTime < TIME_MAXIMUM.SEC) {
 			// sec
-			msg = diffTime + "ÃÊ Àü";
+			msg = diffTime + "õ©îñ";
 		} else if ((diffTime /= TIME_MAXIMUM.SEC) < TIME_MAXIMUM.MIN) {
 			// min
-			msg = diffTime + "ºÐ Àü";
+			msg = diffTime + "ÝÂîñ";
 		} else if ((diffTime /= TIME_MAXIMUM.MIN) < TIME_MAXIMUM.HOUR) {
 			// hour
-			msg = (diffTime) + "½Ã°£ Àü";
+			msg = (diffTime) + "ãÁÊàîñ";
 		} else if ((diffTime /= TIME_MAXIMUM.HOUR) < TIME_MAXIMUM.DAY) {
 			// day
-			msg = (diffTime) + "ÀÏ Àü";
+			msg = (diffTime) + "ìíîñ";
 		} else if ((diffTime /= TIME_MAXIMUM.DAY) < TIME_MAXIMUM.MONTH) {
 			// day
-			msg = (diffTime) + "´Þ Àü";
+			msg = (diffTime) + "««êÅîñ";
 		} else {
-			msg = (diffTime) + "³â Àü";
+			msg = (diffTime) + "Ò´îñ";
 		}
 		return msg;
 	}

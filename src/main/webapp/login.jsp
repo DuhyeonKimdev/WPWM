@@ -20,6 +20,6 @@
 			<button class="loginBtn" type="submit">Submit</button>
 		</form>
 	</div>
-	<p class="para-2">회원이 아니십니까? <a href="SignUp">Sign Up Here</a></p>
+	<p class="para-2">会員ではありませんか? <a href="SignUp">Sign Up Here</a></p>
 </body>
 </html>

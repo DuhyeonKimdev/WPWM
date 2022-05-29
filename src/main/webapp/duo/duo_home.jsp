@@ -17,31 +17,31 @@
 		<table id="duotblSelect">
 			<tr id="selectTr">
 				<td><select name="position" class="select-td">
-						<option value="positionAll">포지션 전체</option>
-						<option value="top">탑</option>
-						<option value="jg">정글</option>
-						<option value="mid">미드</option>
-						<option value="adc">원딜</option>
-						<option value="supp">서포터</option>
+						<option value="positionAll">ポジション全体</option>
+						<option value="top">トップ</option>
+						<option value="jg">ジャングル</option>
+						<option value="mid">ミッド</option>
+						<option value="adc">ADC</option>
+						<option value="supp">サポーター</option>
 				</select> <select name="queue" class="select-td">
-						<option value="solo">솔로랭크</option>
-						<option value="free">자유랭크</option>
-						<option value="normal">일반(비공개 선택)</option>
-						<option value="etc">무작위 총력전</option>
+						<option value="solo">ソロランク</option>
+						<option value="free">Ranked Flex</option>
+						<option value="normal">ノーマル(ブラインドピック)</option>
+						<option value="etc">アラーム</option>
 				</select> <select name="tier" class="select-td">
-						<option value="ALL">티어 전체</option>
-						<option value="IRON">아이언</option>
-						<option value="BRONZE">브론즈</option>
-						<option value="SILVER">실버</option>
-						<option value="GOLD">골드</option>
-						<option value="PLATINUM">플래티넘</option>
-						<option value="DIAMOND">다이아</option>
-						<option value="MASTER">마스터</option>
-						<option value="GRANDMASTER">그랜드마스터</option>
-						<option value="CHALLENGER">챌린저</option>
+						<option value="ALL">ティア全体</option>
+						<option value="IRON">Iron</option>
+						<option value="BRONZE">Bronze</option>
+						<option value="SILVER">Silver</option>
+						<option value="GOLD">Gold</option>
+						<option value="PLATINUM">Platinum</option>
+						<option value="DIAMOND">Diamond</option>
+						<option value="MASTER">Master</option>
+						<option value="GRANDMASTER">Grandmaster</option>
+						<option value="CHALLENGER">Challenger</option>
 				</select>
-					<button class="btn_select" >검색</button>
-					<button class="btn_select" onclick="history.go(-1)" type="button">돌아가기</button></td>
+					<button class="btn_select" >検索</button>
+					<button class="btn_select" onclick="history.go(-1)" type="button">戻る</button></td>
  			<c:choose>
 		 		<c:when test="${sessionScope.accountInfo == null}">
 				<% 	PrintWriter script = response.getWriter(); 
@@ -55,7 +55,7 @@
 				
 				
 				<td colspan="7" align="right"><button class="btn_duoreg"
-						onclick="location.href='DuoRegC?name=${sessionScope.accountInfo.nickname }'" type="button" value="${sessionScope.accountInfo.nickname }">소환사 등록하기</button></td>
+						onclick="location.href='DuoRegC?name=${sessionScope.accountInfo.nickname }'" type="button" value="${sessionScope.accountInfo.nickname }">サモナーを登録する</button></td>
 				</c:otherwise>
 			</c:choose>
 			</tr>
@@ -64,13 +64,13 @@
 	<div id="board-list-wrap">
 		<div id="board-list">
 			<div id="board-list-head">
-				<div id="n">소환사 이름</div>
-				<div id="p">주 포지션</div>
-				<div id="t">티어</div>
-				<div id="w">승률</div>
+				<div id="n">サモナー名前</div>
+				<div id="p">ポジション</div>
+				<div id="t">ティア</div>
+				<div id="w">勝率</div>
 				
-				<div id="m">메모</div>
-				<div id="d">등록일시</div>
+				<div id="m">ノート</div>
+				<div id="d">登録日時</div>
 			</div>
 			<c:forEach var="d" items="${duos }" varStatus="status">
 				<div id="board-list-body">
@@ -82,10 +82,10 @@
 					<c:otherwise>
 							<br>
 							<button class="btn_n2" onclick="window.open('SearchC?name=${d.name}','정보조회',
-								'width=900,height=730,left=1100,top=0,scrollbar=yes');" type="button">정보조회</button>
+								'width=900,height=730,left=1100,top=0,scrollbar=yes');" type="button">情報照会</button>
 							<button class="btn_n2"
 								onclick="window.open('MessageC?no=${d.no}&&name=${d.name}','쪽지보내기',
-								'width=530,height=730,left=1100,top=0,scrollbar=yes');">쪽지보내기</button>
+								'width=530,height=730,left=1100,top=0,scrollbar=yes');">メッセージ送信</button>
 					</c:otherwise>
 				</c:choose>
 						</div>
@@ -105,7 +105,7 @@
 						<div id="w" onclick="location.href='DuoDetailC?no=${d.no}'">
 						 <c:set var="w" value="${d.win}"></c:set>
 						 <c:set var="l" value="${d.lose}"></c:set>
-						 <span style="color: #00BBA3">${w}승</span>&nbsp; &nbsp;<span style="color: #E84057">${l}패</span>
+						 <span style="color: #00BBA3">${w}勝</span>&nbsp; &nbsp;<span style="color: #E84057">${l}敗</span>
 						 <br>
 						 <c:choose>
 						 <c:when test="${w >= l}">
@@ -157,8 +157,8 @@
 	</div>
 			<form action="DuoSearchC" method="post" name="duoSearchForm" onsubmit="return duoSearchCheck();">
 				<p id ="searchNick">
-					<input id="searchNickInput" placeholder="닉네임을 입력하세요" name="searchNick">
-					<button id="btn_searchNick">검색</button>
+					<input id="searchNickInput" placeholder="ニックネームを入力" name="searchNick">
+					<button id="btn_searchNick">検索</button>
 				</p>
 			</form>
 </body>

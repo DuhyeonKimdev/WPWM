@@ -109,13 +109,13 @@
 	<div id="board-list-wrap">
 		<div id="board-list">
 			<div id="board-list-head">
-				<div id="n">소환사 이름</div>
-				<div id="p">주 포지션</div>
-				<div id="t">티어</div>
-				<div id="w">승률</div>
+				<div id="n">サモナー名前</div>
+				<div id="p">ポジション</div>
+				<div id="t">ティア</div>
+				<div id="w">勝率</div>
 				
-				<div id="m">메모</div>
-				<div id="d">등록일시</div>
+				<div id="m">ノート</div>
+				<div id="d">登録日時</div>
 			</div>
 			<c:forEach var="d" items="${duos }" varStatus="status">
 				<div id="board-list-body">

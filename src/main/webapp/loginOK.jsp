@@ -9,7 +9,7 @@
 <body>
 ${r }<p>
 ${sessionScope.accountInfo.nickName }
-<button onclick="location.href='LoginController'">로그아웃</button>
-<button onclick="location.href='InfoAccountC'">회원정보</button>
+<button onclick="location.href='LoginController'">ログアウト</button>
+<button onclick="location.href='InfoAccountC'">会員情報</button>
 </body>
 </html>

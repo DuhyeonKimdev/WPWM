@@ -12,7 +12,7 @@
 		<td>${reg.id }</td>
 	</tr>
 	<tr>
-		<td>닉네임</td>
+		<td>ニックネーム</td>
 		<td>${reg.nickname }</td>
 	</tr>
 	<tr>

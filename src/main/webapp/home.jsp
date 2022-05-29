@@ -16,7 +16,7 @@
 	<form action="SearchC">
 		
 		 <div class="mx-auto input-group mb-3">
-			<input type="text" name="name" class="form-control" placeholder="소환사명..."
+			<input type="text" name="name" class="form-control" placeholder="サモナー名..."
 				aria-label="Recipient's username" aria-describedby="button-addon2">
 			<button class="btn btn-outline-secondary" 
 				id="button-addon2">WPWM</button>

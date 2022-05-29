@@ -40,8 +40,8 @@
 		<a href="DuoHC" style="text-decoration: none;" class="on"><img
 				src="https://opgg-gnb.akamaized.net/static/images/icons/img-navi-duo-gray.svg"
 				id="topmenu_logo" onclick="location.href='DuoHC'" style="width: 30px; margin-top: -5px;">
-				Duo(듀오찾기)</a>
-		<a href="SuggestionHC" style="text-decoration: none;" class="on">건의사항</a>
+				Duo</a>
+		<a href="SuggestionHC" style="text-decoration: none;" class="on">Community</a>
 		<c:choose>
 					<c:when test="${sessionScope.accountInfo == null}">
 						<!-- 로그인 안됨 -->
@@ -58,24 +58,24 @@
 						<button
 							onclick="window.open('MessageRecvlistC?nickname=${sessionScope.accountInfo.nickname }','쪽지보내기',
 								'width=530,height=730,left=1100,top=0,scrollbar=yes');"
-							id="btn_message"><span style="font-size: 12">쪽지함</span>
+							id="btn_message"><span style="font-size: 12">メッセージ</span>
 							</button>
 					</c:otherwise>
 				</c:choose>
 				<c:choose>
 					<c:when test="${sessionScope.accountInfo == null}">
 						<!-- 로그인 안됨 -->
-						<a href="login.jsp" class="on" style="text-decoration: none;">로그인</a>
+						<a href="login.jsp" class="on" style="text-decoration: none;">ログイン</a>
 					</c:when>
 
 					<c:otherwise>
 						<button onclick="location.href='login'" id="btn_logout">
-							<span  style="font-size: 12">로그아웃</span>
+							<span  style="font-size: 12">ログアウト</span>
 						</button>
 						<button class="btn btn-primary mar dropdown-toggle" type="button"
 							data-toggle="dropdown">${nickName }</button>
 						<div class="dropdown-menu" style="width: 40px;">
-							<span onclick="location.href='regC'"; class="dropdown-item" style="width: 50px; cursor: pointer;">개인정보 관리</span>
+							<span onclick="location.href='regC'"; class="dropdown-item" style="width: 50px; cursor: pointer;">Setting</span>
 						</div>
 
 
@@ -87,13 +87,13 @@
 			<ul>
 				<li style="color: rgba(123, 122, 142)"><img
 					onclick="location.href='DuoHC'" src="https://duo.op.gg/duo.svg"
-					id="secondmenu_logoimg"> &nbsp; 영원의 단짝 제대로 찾자!</li>
+					id="secondmenu_logoimg"> &nbsp; 最高のパートナーを見つけましょう!</li>
 			</ul>
 		</div>
 		<div id="thirdMenu">
 			<ul>
-				<li><a href="DuoHC"><span class="thirdMenuTd">듀오찾기</span></a></li>
-				<li><a href="ComplimentC?nickname=${sessionScope.accountInfo.nickname}"><span class="thirdMenuTd">칭찬하기</span></a></li>
+				<li><a href="DuoHC"><span class="thirdMenuTd">Find Duo</span></a></li>
+				<li><a href="ComplimentC?nickname=${sessionScope.accountInfo.nickname}"><span class="thirdMenuTd">称賛する</span></a></li>
 			</ul>
 		</div>
 	</div>

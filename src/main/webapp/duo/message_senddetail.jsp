@@ -21,20 +21,20 @@
 <body style="background-color: #E1EEF5;">
  <table border="1"style="width: 100%; height: 730px;">
  	<tr>
- 		<td><h2 style="text-align: center">쪽지정보</h2></td>
+ 		<td><h2 style="text-align: center">詳細情報</h2></td>
  	</tr>
  	<tr>
- 		<td style="font-size: 20px;">받는이 : ${sendMessage.recvname}</td>
+ 		<td style="font-size: 20px;">受信者 : ${sendMessage.recvname}</td>
  	</tr>
  	<tr>
- 		<td style="font-size: 20px;">날짜 : <fmt:formatDate value="${sendMessage.date}" type="both"
+ 		<td style="font-size: 20px;">日付 : <fmt:formatDate value="${sendMessage.date}" type="both"
 		dateStyle="short" timeStyle="short" /></td>
  	</tr>
  	<tr>
- 		<td style="font-size: 20px; vertical-align: top;">&lt;내용&gt;  <br>  ${sendMessage.content}</td>
+ 		<td style="font-size: 20px; vertical-align: top;">&lt;内容&gt;  <br>  ${sendMessage.content}</td>
  	</tr>
  	<tr>
- 		<td align="center"><button onclick="location.href='MessageSendlistC'" style="text-align: center">목록으로</button></td>
+ 		<td align="center"><button onclick="location.href='MessageSendlistC'" style="text-align: center">戻る</button></td>
  	</tr>
  </table>
 	

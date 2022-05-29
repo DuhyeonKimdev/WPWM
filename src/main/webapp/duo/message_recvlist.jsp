@@ -20,29 +20,28 @@
 <body>
 	<div>
 		<p class="text-center02">
-			&nbsp;<span id="messnickname" style="background-color: gray">${sessionScope.accountInfo.nickname }</span>님의
-			받은쪽지함 <span><a class="message-menu02"
-				href="MessageSendlistC?nickname=${sessionScope.accountInfo.nickname}">보낸쪽지</a></span>
+			&nbsp;<span id="messnickname" style="background-color: gray">${sessionScope.accountInfo.nickname }</span>様の受信箱 <span><a class="message-menu02"
+				href="MessageSendlistC?nickname=${sessionScope.accountInfo.nickname}">送信済み</a></span>
 			<span><a class="message-menu02"
-				href="MessageRecvlistC?nickname=${sessionScope.accountInfo.nickname}">받은쪽지</a></span>
+				href="MessageRecvlistC?nickname=${sessionScope.accountInfo.nickname}">受信箱</a></span>
 		</p>
 		<div id="board_list_wrap1">
 			<div id="board-list">
 				<form
 					action="MessageDelController?nickname=${sessionScope.accountInfo.nickname }"
-					method="post" onsubmit="return confirm('정말 삭제하시겠습니까?')" type="submit" >
+					method="post" onsubmit="return confirm('本当に削除しますか?')" type="submit" >
 					<div id="board-list-head1">
-						<div id="p2">보낸이</div>
-						<div id="n4">내용</div>
+						<div id="p2">送信者</div>
+						<div id="n4">内容</div>
 						<div id="t1">
-							날짜
+							日付
 							<button style="float: right;" class="material-icons i_btn">delete</button>
 						</div>
 					</div>
 				</form>
 
 				<c:forEach var="m" items="${Recvmessages }" varStatus="status">
-					<form action="MessageDelController?no=${m.no}" method="post" onsubmit="return confirm('정말 삭제하시겠습니까?')" type="submit" >
+					<form action="MessageDelController?no=${m.no}" method="post" onsubmit="return confirm('本当に削除しますか?')" type="submit" >
 						<div id="board-list-body">
 							<c:choose>
 								<c:when
@@ -50,10 +49,10 @@
 									<div id="item">
 										<div id="n3">${m.sendname}<br>
 											<button class="btn_n2" onclick="window.open('SearchC?name=${m.sendname}','정보조회',
-								'width=900,height=730,left=1100,top=0,scrollbar=yes');" type="button">정보조회</button>
+								'width=900,height=730,left=1100,top=0,scrollbar=yes');" type="button">情報照会</button>
 											<button class="btn_n2" type="button"
 												onclick="window.open('MessageC?nickname=${sessionScope.accountInfo.nickname}&&name=${m.sendname}','쪽지보내기',
-								'width=430,height=400,left=1100,top=0,scrollbar=yes');">쪽지보내기</button>
+								'width=430,height=400,left=1100,top=0,scrollbar=yes');">メッセージ送信</button>
 										</div>
 										<div id="m4"
 											onclick="location.href='MessageRecvDetailC?no=${m.no}'">${m.content}</div>
@@ -72,7 +71,7 @@
 				</c:forEach>
 		</div>
 			<div align="center" style="background-color: #E1EEF5;">
-				<button onclick="location.href='MessageSendC?nickname=${sessionScope.accountInfo.nickname}&&id=${sessionScope.accountInfo.id}'">새 쪽지 작성</button>
+				<button onclick="location.href='MessageSendC?nickname=${sessionScope.accountInfo.nickname}&&id=${sessionScope.accountInfo.id}'">メッセージ作成</button>
 			</div>
 			</div>
 	</div>

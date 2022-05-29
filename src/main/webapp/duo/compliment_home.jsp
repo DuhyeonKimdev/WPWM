@@ -27,7 +27,7 @@
 				</c:when>
 				<c:otherwise>
 				<td colspan="7" align="right"><button class="btn_duoreg"
-						onclick="location.href='ComplimentRegC?nickname=${sessionScope.accountInfo.nickname}'" type="button" value="${sessionScope.accountInfo.nickname }">칭찬하기</button></td>
+						onclick="location.href='ComplimentRegC?nickname=${sessionScope.accountInfo.nickname}'" type="button" value="${sessionScope.accountInfo.nickname }">称賛する</button></td>
 				</c:otherwise>
 			</c:choose>
 			</tr>
@@ -36,12 +36,12 @@
 	<div id="board-list-wrap">
 		<div id="board-list">
 			<div id="board-list-head">
-				<div id="n5">소환사 이름</div>
-				<div id="t5">티어</div>
-				<div id="m6">메모</div>
-				<div id="w5">추천<a style="color: green" href="ComplimentLikeListC?nickname=${sessionScope.accountInfo.nickname}">(추천순으로)</a></div>
+				<div id="n5">サモナー名前</div>
+				<div id="t5">ティア</div>
+				<div id="m6">ノート</div>
+				<div id="w5">いいね<a style="color: green" href="ComplimentLikeListC?nickname=${sessionScope.accountInfo.nickname}">(いいね順に)</a></div>
 				
-				<div id="d5">등록일시</div>
+				<div id="d5">登録日時</div>
 			</div>
 			<c:forEach var="c" items="${compliments }" varStatus="status">
 				<form action="ComplimentLikeC" onsubmit="return " >
@@ -54,10 +54,10 @@
 					<c:otherwise>
 							<br>
 							<button class="btn_n2" onclick="window.open('SearchC?name=${c.name}','정보조회',
-								'width=900,height=730,left=1100,top=0,scrollbar=yes');" type="button">정보조회</button>
+								'width=900,height=730,left=1100,top=0,scrollbar=yes');" type="button">情報照会</button>
 							<button class="btn_n2"
 								onclick="window.open('MessageC?no=${c.no}&&name=${c.name}','쪽지보내기',
-								'width=530,height=730,left=1100,top=0,scrollbar=yes');" type="button">쪽지보내기</button>
+								'width=530,height=730,left=1100,top=0,scrollbar=yes');" type="button">メッセージ送信</button>
 					</c:otherwise>
 				</c:choose>
 						</div>
@@ -75,8 +75,8 @@
 						</div>
 						<div id="m5" onclick="location.href='ComplimentDetailC?no=${c.no}'">${c.memo}</div>
 						
-						<div id="w5">추천 : ${c.likecount } <br>
-						<a onclick="return confirm('추천하시겠습니까?')" href="ComplimentLikeC?no=${c.no}&&nickname=${sessionScope.accountInfo.nickname}" style="color: blue;">추천하기</a>
+						<div id="w5">いいね : ${c.likecount } <br>
+						<a onclick="return confirm('추천하시겠습니까?')" href="ComplimentLikeC?no=${c.no}&&nickname=${sessionScope.accountInfo.nickname}" style="color: blue;">推薦する</a>
 						</div>
 						
 						<div id="d5">${c.date}
@@ -120,8 +120,8 @@
 	</div>
 			<form action="ComplimentSearchC" method="post" name="duoSearchForm" onsubmit="return duoSearchCheck();">
 				<p id ="searchNick">
-					<input id="searchNickInput" placeholder="닉네임을 입력하세요" name="searchNick">
-					<button id="btn_searchNick">검색</button>
+					<input id="searchNickInput" placeholder="ニックネームを入力" name="searchNick">
+					<button id="btn_searchNick">検索</button>
 				</p>
 			</form>
 </body>
