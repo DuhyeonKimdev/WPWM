@@ -5,9 +5,9 @@
 * 開発人数: 3人
 * 自分の役目 : チームリーダー、 一緒にプレーするパートナー（デュオ）を見つける掲示板と他人を褒める掲示板の開発、メッセージ機能開発
 * 技術スタック : Java 14, HTML5, CSS3, Oracle 11g
-* イメージ１
+* イメージ１（indexページ）
 ![index](https://user-images.githubusercontent.com/99231386/172135656-54c01def-b76d-4bad-9c3d-9ddb76ec9a5c.png)
-+ イメージ２
++ イメージ２（一緒にプレーするパートナー（デュオ）を見つける掲示板とメッセージ機能）
 ![duo](https://user-images.githubusercontent.com/99231386/172135696-fd78c385-8b2d-41b3-b546-5a3fda67d92c.png)
-+ イメージ３
++ イメージ３（他人を褒める掲示板）
 ![compliment](https://user-images.githubusercontent.com/99231386/172135715-9f015e1f-9c7d-44a5-8a90-2ec6e339b43d.png)
